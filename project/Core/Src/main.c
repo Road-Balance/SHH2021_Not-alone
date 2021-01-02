@@ -80,6 +80,7 @@ int __io_getchar(void)
 	}
 	return ch;
 }
+// don't use this function
 //void LED1(uint32_t interval)
 //{
 //	HAL_GPIO_WritePin(URLED1_GPIO_Port, URLED1_Pin, GPIO_PIN_SET);
@@ -136,40 +137,45 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  double gyro_z_offset = 210;
-    double turning_angle = 0;
-    double cal_turning_angle =0;
-    double servo_motor_pwm = 0;
-    double kiosk_location = 45;
-    double real_servo_angle = 0;
+
+  	// Callibration
+  	double gyro_z_offset = 210;
+    double Turning_angle = 0;
+    double Cal_turning_angle = 0;
+    double Servo_motor_pwm = 0;
+    double Real_servo_angle = 0;
+
+    // Receive from AWS cloud
+    double Kiosk_Location = 118.2; // angle(°)
+
     dataRdyIntReceived = 0;
     MEMS_Init();
       while (1)
       {
 
-//    	  //2ms Pwm - Servo motor arm rotates to 180 degree
-    	  //__HAL_TIM_SetCompare(&htim15, TIM_CHANNEL_2, 80);
+//    	  //Rotates to 180 degree
+    	  //__HAL_TIM_SetCompare(&htim15, TIM_CHANNEL_2, 120);
 //    	  HAL_Delay(1000); // 1000ms
 //
-//    	  //1.5ms Pwm - Servo motor arm rotates to 90 degree
-//    	  __HAL_TIM_SetCompare(&htim15, TIM_CHANNEL_2, 75);
+//    	  //Rotates to 90 degree
+//    	  __HAL_TIM_SetCompare(&htim15, TIM_CHANNEL_2, 80);
 //    	  HAL_Delay(1000); // 1000ms
 //
-//    	  //1ms Pwm - Servo motor arm rotates to 0 degree
-//    	  __HAL_TIM_SetCompare(&htim15, TIM_CHANNEL_2, 40);
+//    	  //Rrotates to 0 degree
+//   	  __HAL_TIM_SetCompare(&htim15, TIM_CHANNEL_2, 40);
 //    	  HAL_Delay(1000); // 1000ms
 
-	  	  //LED1(1000);
-	  	  //HAL_Delay(1000);
-	  	  //TED02(1000);
-	  	  //HAL_Delay(1000);
+
+
     	  //HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
     	  	//HAL_UART_Transmit(&huart1, (uint8_t*)data, COUNTOF(data)-1, 100);
     	  	//printf("START \r\n");
     	  	//HAL_Delay(1000);
-    	  	if (dataRdyIntReceived != 0)
+
+    	  if (dataRdyIntReceived != 0)
     	  	{
     	  		dataRdyIntReceived = 0;
+
     	  		LSM6DSL_Axes_t acc_axes;
     	  		LSM6DSL_Axes_t gyro_axes;
     	  		//LSM6DSL_Axes_t magnato_axes;
@@ -178,26 +184,46 @@ int main(void)
     	  		LSM6DSL_GYRO_GetAxes(&MotionSensor, &gyro_axes);
     	  		//LIS3MDL_MAG_GetAxes(&MotionSensor, &magnato_axes);
 
+    	  		// print acc value
+    	  		//printf("acc_x = %5d, acc_y = %5d, acc_z = %5d\r\n", (int)acc_axes.x, (int)acc_axes.y, (int)acc_axes.z);
+
+    	  		// print magnato value
+    	  		//printf("mag_x = %5d, mag_y = %5d, mag_z = %5d\r\n", (int)magnato_axes.x, (int)magnato_axes.y, (int)magnato_axes.z);
+
     	  		// print gyro value
     	  		//printf("gyro_x = %5d, gyro_y = %5d, gyro_z = %5d\r\n", (int)gyro_axes.x, (int)gyro_axes.y, (int)gyro_axes.z);
 
     	  		// print gyro_z
     	  		printf(" gyro_z = %5d\r\n", (int)gyro_axes.z);
 
-    	  		// calibration and integral
-    	  		turning_angle = turning_angle + ((int)gyro_axes.z - gyro_z_offset) * (0.0385); // 0.0385 = 26hz
-    	  	    printf(" angle = %5d \r\n ", (int)turning_angle);
-    	  	    cal_turning_angle = turning_angle * 90 / 90000;
-    	  	    printf(" cal_angle = %5d \r\n", (int)cal_turning_angle);
+    	  		// Calibration and Integral
+    	  		Turning_angle = Turning_angle + (gyro_axes.z - gyro_z_offset) * (0.0385); // 0.0385 = 26hz
+    	  	    printf(" angle = %5d \r\n ", (int)Turning_angle);
 
-    	  	    real_servo_angle = kiosk_location - (int)cal_turning_angle;
-    	  	    servo_motor_pwm = real_servo_angle * 80 / 180 + 40;
-    	  	    __HAL_TIM_SetCompare(&htim15, TIM_CHANNEL_2, servo_motor_pwm);
+    	  	    // Transform to angel(°)
+    	  	    Cal_turning_angle = Turning_angle * 90 / 90000; //
+    	  	    printf(" cal_angle = %5d \r\n", (int)Cal_turning_angle);
+
+    	  	    // Real servo angle
+    	  	    Real_servo_angle = Kiosk_Location - Cal_turning_angle;
+
+    	  	    if(Real_servo_angle <= 0)
+    	  	    {
+    	  	    	Real_servo_angle = 0;
+    	  	    }
+    	  	    if (Real_servo_angle >= 180)
+    	  	    {
+    	  	    	Real_servo_angle = 180;
+    	  	    }
+
+    	  	    // Mapping real_servo_angel to PWM_signal (0° ~ 180° <=> 40 ~ 120)
+    	  	    Servo_motor_pwm = Real_servo_angle * 80 / 180 + 40;
+
+    	  	    // Start program
+    	  	    __HAL_TIM_SetCompare(&htim15, TIM_CHANNEL_2, Servo_motor_pwm);
 
 
-    	  		//printf("gcc_x = %5d, gcc_y = %5d, gcc_z = %5d, mag_x = %5d, mag_y = %5d, mag_z = %5d\r\n", (int)acc_axes.x, (int)acc_axes.y, (int)acc_axes.z, (int)magnato_axes.x, (int)magnato_axes.y, (int)magnato_axes.z);
-    	  		//printf("mag_x = %5d, mag_y = %5d, mag_z = %5d\r\n", (int)magnato_axes.x, (int)magnato_axes.y, (int)magnato_axes.z);
-    	  	  	 }
+    	  		 }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

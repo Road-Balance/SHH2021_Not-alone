@@ -56,8 +56,8 @@ all: main-build
 main-build: project.elf secondary-outputs
 
 # Tool invocations
-project.elf: $(OBJS) $(USER_OBJS) C:\Seoulhardware_hackerton\SHH2021\project\STM32L4S5VITX_FLASH.ld
-	arm-none-eabi-gcc -o "project.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Seoulhardware_hackerton\SHH2021\project\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+project.elf: $(OBJS) $(USER_OBJS) C:\Seoulhardware_hackerton\SHH2021_Not-alone\project\STM32L4S5VITX_FLASH.ld
+	arm-none-eabi-gcc -o "project.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Seoulhardware_hackerton\SHH2021_Not-alone\project\STM32L4S5VITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="project.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
