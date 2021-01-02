@@ -1,0 +1,13 @@
+custom_bus.c:209:9:BSP_I2C2_Init	16	static
+custom_bus.c:257:9:BSP_I2C2_DeInit	16	static
+custom_bus.c:285:9:BSP_I2C2_IsReady	24	static
+custom_bus.c:306:9:BSP_I2C2_WriteReg	48	static
+custom_bus.c:332:10:BSP_I2C2_ReadReg	48	static
+custom_bus.c:360:9:BSP_I2C2_WriteReg16	48	static
+custom_bus.c:385:10:BSP_I2C2_ReadReg16	48	static
+custom_bus.c:410:9:BSP_I2C2_Send	32	static
+custom_bus.c:435:9:BSP_I2C2_Recv	32	static
+custom_bus.c:510:9:BSP_GetTick	8	static
+custom_bus.c:516:26:MX_I2C2_Init	24	static
+custom_bus.c:546:13:I2C2_MspInit	48	static
+custom_bus.c:579:13:I2C2_MspDeInit	16	static
