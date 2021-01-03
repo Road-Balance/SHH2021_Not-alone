@@ -1,5 +1,5 @@
 
-소스코드 작성 : 
+소스코드 작성 위치 : Core/Src/main.c
 
 <center><img src="./img/키오스크위치정보_각도변환.jpg" width="60%" height="60%"></center>
 
