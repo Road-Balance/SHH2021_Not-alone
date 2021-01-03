@@ -1,0 +1,120 @@
+
+= [SBOOT] System Security Check successfully passed. Starting...
+= [FWIMG] Slot #0 @: 8105000 / Slot #1 @: 8036000 / Swap @: 81d5000
+
+
+======================================================================
+=              (C) COPYRIGHT 2017 STMicroelectronics                 =
+=                                                                    =
+=              Secure Boot and Secure Firmware Update                =
+======================================================================
+
+
+= [SBOOT] STATE: WARNING: SECURE ENGINE INITIALIZATION WITH FACTORY DEFAULT VALUES!
+= [SBOOT] STATE: CHECK STATUS ON RESET
+	  INFO: A Reboot has been triggered by a Software reset!
+	  Consecutive Boot on error counter = 0 
+	  INFO: Last execution detected error was:No error. Success.
+= [SBOOT] STATE: CHECK NEW FIRMWARE TO DOWNLOAD
+= [SBOOT] STATE: CHECK KMS BLOB TO INSTALL
+= [SBOOT] STATE: CHECK USER FW STATUS
+= [SBOOT] LOADING CERTS FROM SECURE ENGINEOK
+= [SBOOT] Verifying the Certificate chain... OK
+= [SBOOT] Verify Header Signature... OK
+	  A valid FW is installed in the active slot - version: 1
+= [SBOOT] STATE: VERIFY USER FW SIGNATURE
+= [SBOOT] CHECKING IMAGE STATE
+=         SFU_IMG_CheckImageState Image State = 1
+= [SBOOT] IMAGE STATE OK
+= [SBOOT] STATE: EXECUTE USER FIRMWARE0 526 [Tmr Svc] WiFi module initialized.
+1 533 [Tmr Svc] Device Certificate (DER), size = 403 
+2 538 [Tmr Svc] Device Certificate (PEM), size = 604 
+-----BEGIN CERTIFICATE-----
+MIIBjzCCATSgAwIBAgILAgkwxGEhzCJbATkwCgYIKoZIzj0EAwIwTzELMAkGA1UE
+BhMCTkwxHjAcBgNVBAoMFVNUTWljcm9lbGVjdHJvbmljcyBudjEgMB4GA1UEAwwX
+U1RNIFNUU0FGRS1BIFBST0QgQ0EgMDEwIBcNMjAwMjI2MDAwMDAwWhgPMjA1MDAy
+MjYwMDAwMDBaMEYxCzAJBgNVBAYTAkZSMRswGQYDVQQKDBJTVE1pY3JvZWxlY3Ry
+b25pY3MxGjAYBgNVBAMMEVNUU0FGRS1BMTEwIEVWQUwyMFkwEwYHKoZIzj0CAQYI
+KoZIzj0DAQcDQgAEtf4ty5yEM/2O9PLAW3aWwNuiUv/RQpsWU2kp6CbqO7QFDjRD
+JFGspGHZHJFA2iWfs6q5IOry1YSMbMhJ0QrXzjAKBggqhkjOPQQDAgNJADBGAiEA
+ljhDUQNSJ0TAocrnYVG7Cg3YXFx64m38P8nqbqaagPECIQDlogV0dtncIhVkRK0V
+MZ8wR684kFsaO5n4F3kLLJ/hNg==
+-----END CERTIFICATE-----
+3 596 [Tmr Svc] WiFi Firmware Version C3.5.2.5.STM.
+...4 6504 [Tmr Svc] WiFi connected to AP KT_GiGA_6FC6.
+5 6509 [Tmr Svc] IP Address acquired 172.30.1.10
+6 6513 [iot_thread] [INFO ][DEMO][lu] ---------STARTING DEMO---------
+
+7 6520 [iot_thread] [INFO ][INIT][lu] SDK successfully initialized.
+.................8 41056 [iot_thread] [INFO ][DEMO][lu] Successfully initialized the demo. Network type for the demo: 1
+9 41065 [iot_thread] [INFO ][MQTT][lu] MQTT library successfully initialized.
+10 41072 [iot_thread] OTA demo version 0.9.2
+11 41076 [iot_thread] Creating MQTT Client...
+.12 44015 [iot_thread] Connecting to broker...
+13 44019 [iot_thread] [INFO ][MQTT][lu] Establishing new MQTT connection.
+14 44026 [iot_thread] [INFO ][MQTT][lu] Anonymous metrics (SDK language, SDK version) will be provided to AWS IoT. Recompile with AWS_IOT_MQTT_ENABLE_METRICS set to 0 to disable.
+15 44042 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x20044a10, CONNECT operation 0x20044b98) Waiting for operation completion.
+.16 44116 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x20044a10, CONNECT operation 0x20044b98) Wait complete with result SUCCESS.
+17 44128 [iot_thread] [INFO ][MQTT][lu] New MQTT connection 0x200401c8 established.
+18 44136 [iot_thread] Connected to broker.
+19 44141 [iot_thread] [OTA_AgentInit_internal] OTA Task is Ready.
+20 44147 [OTA Agent Task] [prvOTAAgentTask] Called handler. Current State [Ready] Event [Start] New state [RequestingJob] 
+21 44158 [OTA Agent Task] [INFO ][MQTT][lu] (MQTT connection 0x20044a10) SUBSCRIBE operation scheduled.
+22 44168 [OTA Agent Task] [INFO ][MQTT][lu] (MQTT connection 0x20044a10, SUBSCRIBE operation 0x200454b0) Waiting for operation completion.
+23 44223 [OTA Agent Task] [INFO ][MQTT][lu] (MQTT connection 0x20044a10, SUBSCRIBE operation 0x200454b0) Wait complete with result SUCCESS.
+24 44235 [OTA Agent Task] [prvSubscribeToJobNotificationTopics] OK: $aws/things/iot-stm-sensor-nodeA/jobs/$next/get/accepted
+25 44247 [OTA Agent Task] [INFO ][MQTT][lu] (MQTT connection 0x20044a10) SUBSCRIBE operation scheduled.
+26 44257 [OTA Agent Task] [INFO ][MQTT][lu] (MQTT connection 0x20044a10, SUBSCRIBE operation 0x200454b0) Waiting for operation completion.
+27 44321 [OTA Agent Task] [INFO ][MQTT][lu] (MQTT connection 0x20044a10, SUBSCRIBE operation 0x200454b0) Wait complete with result SUCCESS.
+28 44333 [OTA Agent Task] [prvSubscribeToJobNotificationTopics] OK: $aws/things/iot-stm-sensor-nodeA/jobs/notify-next
+29 44344 [OTA Agent Task] [prvRequestJob_Mqtt] Request #0
+30 44351 [OTA Agent Task] [INFO ][MQTT][lu] (MQTT connection 0x20044a10) MQTT PUBLISH operation queued.
+31 44360 [OTA Agent Task] [INFO ][MQTT][lu] (MQTT connection 0x20044a10, PUBLISH operation 0x200454b0) Waiting for operation completion.
+32 45146 [iot_thread] State: Ready  Received: 0   Queued: 0   Processed: 0   Dropped: 0
+33 45491 [OTA Agent Task] [INFO ][MQTT][lu] (MQTT connection 0x20044a10, PUBLISH operation 0x200454b0) Wait complete with result SUCCESS.
+34 45503 [OTA Agent Task] [prvOTAAgentTask] Called handler. Current State [RequestingJob] Event [RequestJobDocument] New state [WaitingForJob] 
+35 45516 [OTA Agent Task] [prvParseJobDoc] Size of OTA_FileContext_t [64]
+36 45523 [OTA Agent Task] [prvParseJSONbyModel] Extracted parameter [ clientToken: 0:iot-stm-sensor-nodeA ]
+37 45533 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: execution
+38 45540 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: jobId
+39 45548 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: jobDocument
+40 45555 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: afr_ota
+41 45562 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: protocols
+42 45571 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: files
+43 45578 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: filepath
+44 45586 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: filesize
+45 45594 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: fileid
+46 45601 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: certfile
+47 45608 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: sig-sha256-ecdsa
+48 45616 [OTA Agent Task] [prvDefaultCustomJobCallback] Received Custom Job inside OTA Agent which is not supported.
+49 45627 [OTA Agent Task] [prvParseJobDoc] Ignoring job without ID.
+50 45633 [OTA Agent Task] [prvOTA_Close] Context->0x0x2004f280
+51 45639 [OTA Agent Task] [prvPAL_SetPlatformImageState] Current state (SE_FwStateTypeDef) 1
+52 45648 [OTA Agent Task] [prvPAL_SetPlatformImageState] Request to change state to (OTA_ImageState_t) 4
+53 45657 [OTA Agent Task] [prvOTAAgentTask] Handler failed. Current State [WaitingForJob] Event  [ReceivedJobDocument] Error Code [603979776] 
+54 45670 [OTA Agent Task] [prvParseJobDoc] Size of OTA_FileContext_t [64]
+55 45676 [OTA Agent Task] [prvParseJSONbyModel] Extracted parameter [ clientToken: 0:iot-stm-sensor-nodeA ]
+56 45686 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: execution
+57 45694 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: jobId
+58 45701 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: jobDocument
+59 45708 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: afr_ota
+60 45716 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: protocols
+61 45723 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: files
+62 45730 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: filepath
+63 45738 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: filesize
+64 45745 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: fileid
+65 45752 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: certfile
+66 45759 [OTA Agent Task] [prvParseJSONbyModel] parameter not present: sig-sha256-ecdsa
+67 45767 [OTA Agent Task] [prvDefaultCustomJobCallback] Received Custom Job inside OTA Agent which is not supported.
+68 45778 [OTA Agent Task] [prvParseJobDoc] Ignoring job without ID.
+69 45784 [OTA Agent Task] [prvOTA_Close] Context->0x0x2004f280
+70 45790 [OTA Agent Task] [prvPAL_SetPlatformImageState] Current state (SE_FwStateTypeDef) 1
+71 45799 [OTA Agent Task] [prvPAL_SetPlatformImageState] Request to change state to (OTA_ImageState_t) 4
+72 45808 [OTA Agent Task] [prvOTAAgentTask] Handler failed. Current State [WaitingForJob] Event  [ReceivedJobDocument] Error Code [603979776] 
+.73 46153 [iot_thread] State: RequestingJob  Received: 2   Queued: 0   Processed: 0   Dropped: 0
+74 47161 [iot_thread] State: WaitingForJob  Received: 2   Queued: 0   Processed: 0   Dropped: 0
+.75 48169 [iot_thread] State: WaitingForJob  Received: 2   Queued: 0   Processed: 0   Dropped: 0
+76 49177 [iot_thread] State: WaitingForJob  Received: 2   Queued: 0   Processed: 0   Dropped: 0
+.77 50185 [iot_thread] State: WaitingForJob  Received: 2   Queued: 0   Processed: 0   Dropped: 0
+78 51193 [iot_thread] State: WaitingForJob  Received: 2   Queued: 0   Processed: 0   Dropped: 0
+.79 52201 [iot_thread] State: WaitingForJob  Received: 2   Queued: 0   Processed: 0   Dropped: 0
