@@ -146,7 +146,7 @@ int main(void)
     double Real_servo_angle = 0;
 
     // Receive from AWS cloud
-    double Kiosk_Location = 118.2; // angle(°)
+    double Kiosk_Location = 118.2	; // angle(°)
 
     dataRdyIntReceived = 0;
     MEMS_Init();
