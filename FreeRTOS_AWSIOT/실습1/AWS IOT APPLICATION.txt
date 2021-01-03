@@ -1,0 +1,46 @@
+
+= [SBOOT] System Security Check successfully passed. Starting...
+= [FWIMG] Slot #0 @: 8105000 / Slot #1 @: 8036000 / Swap @: 81d5000
+
+
+======================================================================
+=              (C) COPYRIGHT 2017 STMicroelectronics                 =
+=                                                                    =
+=              Secure Boot and Secure Firmware Update                =
+======================================================================
+
+
+= [SBOOT] STATE: WARNING: SECURE ENGINE INITIALIZATION WITH FACTORY DEFAULT VALUES!
+= [SBOOT] STATE: CHECK STATUS ON RESET
+	  INFO: A Reboot has been triggered by a Software reset!
+	  Consecutive Boot on error counter = 0 
+	  INFO: Last execution detected error was:No error. Success.
+= [SBOOT] STATE: CHECK NEW FIRMWARE TO DOWNLOAD
+= [SBOOT] STATE: CHECK KMS BLOB TO INSTALL
+= [SBOOT] STATE: CHECK USER FW STATUS
+= [SBOOT] LOADING CERTS FROM SECURE ENGINEOK
+= [SBOOT] Verifying the Certificate chain... OK
+= [SBOOT] Verify Header Signature... OK
+	  A valid FW is installed in the active slot - version: 1
+= [SBOOT] STATE: VERIFY USER FW SIGNATURE
+= [SBOOT] CHECKING IMAGE STATE
+=         SFU_IMG_CheckImageState Image State = 1
+= [SBOOT] IMAGE STATE OK
+= [SBOOT] STATE: EXECUTE USER FIRMWARE0 526 [Tmr Svc] WiFi module initialized.
+1 532 [Tmr Svc] Device Certificate (DER), size = 403 
+2 537 [Tmr Svc] Device Certificate (PEM), size = 604 
+-----BEGIN CERTIFICATE-----
+MIIBjzCCATSgAwIBAgILAgkwxGEhzCJbATkwCgYIKoZIzj0EAwIwTzELMAkGA1UE
+BhMCTkwxHjAcBgNVBAoMFVNUTWljcm9lbGVjdHJvbmljcyBudjEgMB4GA1UEAwwX
+U1RNIFNUU0FGRS1BIFBST0QgQ0EgMDEwIBcNMjAwMjI2MDAwMDAwWhgPMjA1MDAy
+MjYwMDAwMDBaMEYxCzAJBgNVBAYTAkZSMRswGQYDVQQKDBJTVE1pY3JvZWxlY3Ry
+b25pY3MxGjAYBgNVBAMMEVNUU0FGRS1BMTEwIEVWQUwyMFkwEwYHKoZIzj0CAQYI
+KoZIzj0DAQcDQgAEtf4ty5yEM/2O9PLAW3aWwNuiUv/RQpsWU2kp6CbqO7QFDjRD
+JFGspGHZHJFA2iWfs6q5IOry1YSMbMhJ0QrXzjAKBggqhkjOPQQDAgNJADBGAiEA
+ljhDUQNSJ0TAocrnYVG7Cg3YXFx64m38P8nqbqaagPECIQDlogV0dtncIhVkRK0V
+MZ8wR684kFsaO5n4F3kLLJ/hNg==
+-----END CERTIFICATE-----
+3 594 [Tmr Svc] WiFi Firmware Version C3.5.2.5.STM.
+................................4 64333 [Tmr Svc] WiFi failed to connect to AP KT_GiGA_6FC6.
+5 64339 [Tmr Svc] Connect to softAP ConfigureMe using password awsiotdevice. 
+..

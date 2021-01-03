@@ -1,0 +1,309 @@
+
+= [SBOOT] System Security Check successfully passed. Starting...
+= [FWIMG] Slot #0 @: 8105000 / Slot #1 @: 8036000 / Swap @: 81d5000
+
+
+======================================================================
+=              (C) COPYRIGHT 2017 STMicroelectronics                 =
+=                                                                    =
+=              Secure Boot and Secure Firmware Update                =
+======================================================================
+
+
+= [SBOOT] STATE: WARNING: SECURE ENGINE INITIALIZATION WITH FACTORY DEFAULT VALUES!
+= [SBOOT] STATE: CHECK STATUS ON RESET
+	  INFO: A Reboot has been triggered by a Software reset!
+	  Consecutive Boot on error counter = 0 
+	  INFO: Last execution detected error was:No error. Success.
+= [SBOOT] STATE: CHECK NEW FIRMWARE TO DOWNLOAD
+= [SBOOT] STATE: CHECK KMS BLOB TO INSTALL
+= [SBOOT] STATE: CHECK USER FW STATUS
+= [SBOOT] LOADING CERTS FROM SECURE ENGINEOK
+= [SBOOT] Verifying the Certificate chain... OK
+= [SBOOT] Verify Header Signature... OK
+	  A valid FW is installed in the active slot - version: 1
+= [SBOOT] STATE: VERIFY USER FW SIGNATURE
+= [SBOOT] CHECKING IMAGE STATE
+=         SFU_IMG_CheckImageState Image State = 1
+= [SBOOT] IMAGE STATE OK
+= [SBOOT] STATE: EXECUTE USER FIRMWARE0 526 [Tmr Svc] WiFi module initialized.
+1 532 [Tmr Svc] Device Certificate (DER), size = 403 
+2 537 [Tmr Svc] Device Certificate (PEM), size = 604 
+-----BEGIN CERTIFICATE-----
+MIIBjzCCATSgAwIBAgILAgkwxGEhzCJbATkwCgYIKoZIzj0EAwIwTzELMAkGA1UE
+BhMCTkwxHjAcBgNVBAoMFVNUTWljcm9lbGVjdHJvbmljcyBudjEgMB4GA1UEAwwX
+U1RNIFNUU0FGRS1BIFBST0QgQ0EgMDEwIBcNMjAwMjI2MDAwMDAwWhgPMjA1MDAy
+MjYwMDAwMDBaMEYxCzAJBgNVBAYTAkZSMRswGQYDVQQKDBJTVE1pY3JvZWxlY3Ry
+b25pY3MxGjAYBgNVBAMMEVNUU0FGRS1BMTEwIEVWQUwyMFkwEwYHKoZIzj0CAQYI
+KoZIzj0DAQcDQgAEtf4ty5yEM/2O9PLAW3aWwNuiUv/RQpsWU2kp6CbqO7QFDjRD
+JFGspGHZHJFA2iWfs6q5IOry1YSMbMhJ0QrXzjAKBggqhkjOPQQDAgNJADBGAiEA
+ljhDUQNSJ0TAocrnYVG7Cg3YXFx64m38P8nqbqaagPECIQDlogV0dtncIhVkRK0V
+MZ8wR684kFsaO5n4F3kLLJ/hNg==
+-----END CERTIFICATE-----
+3 594 [Tmr Svc] WiFi Firmware Version C3.5.2.5.STM.
+.4 3830 [Tmr Svc] WiFi connected to AP KT_GiGA_6FC6.
+5 3835 [Tmr Svc] IP Address acquired 172.30.1.54
+6 3839 [iot_thread] [INFO ][DEMO][lu] ---------STARTING DEMO---------
+
+7 3846 [iot_thread] [INFO ][INIT][lu] SDK successfully initialized.
+..8 7474 [iot_thread] [INFO ][DEMO][lu] Successfully initialized the demo. Network type for the demo: 1
+9 7483 [iot_thread] [INFO ][MQTT][lu] MQTT library successfully initialized.
+10 7490 [iot_thread] [INFO ][DEMO][lu] MQTT demo client identifier is iot-stm-sensor-nodeA (length 20).
+..11 10429 [iot_thread] [INFO ][MQTT][lu] Establishing new MQTT connection.
+12 10436 [iot_thread] [INFO ][MQTT][lu] Anonymous metrics (SDK language, SDK version) will be provided to AWS IoT. Recompile with AWS_IOT_MQTT_ENABLE_METRICS set to 0 to disable.
+13 10454 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0, CONNECT operation 0x20044848) Waiting for operation completion.
+14 10653 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0, CONNECT operation 0x20044848) Wait complete with result SUCCESS.
+15 10665 [iot_thread] [INFO ][MQTT][lu] New MQTT connection 0x20042e1c established.
+16 10674 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) SUBSCRIBE operation scheduled.
+17 10683 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0, SUBSCRIBE operation 0x20044868) Waiting for operation completion.
+18 10914 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0, SUBSCRIBE operation 0x20044868) Wait complete with result SUCCESS.
+19 10926 [iot_thread] [INFO ][DEMO][lu] All demo topic filter subscriptions accepted.
+20 10934 [iot_thread] [INFO ][DEMO][lu] Publishing messages 0 to 1.
+21 10941 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+22 10951 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+23 10960 [iot_thread] [INFO ][DEMO][lu] Waiting for 2 publishes to be received.
+24 10997 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 1 successfully sent.
+25 11023 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 0 successfully sent.
+26 11042 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/2
+Publish topic name: iotdemo/topic/2
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 1!
+27 11062 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+28 11071 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 1 will be sent.
+29 11095 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/1
+Publish topic name: iotdemo/topic/1
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 0!
+30 11115 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+31 11124 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 0 will be sent.
+32 11133 [iot_thread] [INFO ][DEMO][lu] 2 publishes received.
+33 11139 [iot_thread] [INFO ][DEMO][lu] Publishing messages 2 to 3.
+34 11146 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+35 11156 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+36 11165 [iot_thread] [INFO ][DEMO][lu] Waiting for 2 publishes to be received.
+37 11202 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 3 successfully sent.
+38 11232 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/4
+Publish topic name: iotdemo/topic/4
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 3!
+39 11252 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+40 11261 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 3 will be sent.
+41 11281 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 2 successfully sent.
+42 11300 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/3
+Publish topic name: iotdemo/topic/3
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 2!
+43 11320 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+44 11329 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 2 will be sent.
+45 11338 [iot_thread] [INFO ][DEMO][lu] 2 publishes received.
+46 11344 [iot_thread] [INFO ][DEMO][lu] Publishing messages 4 to 5.
+47 11351 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+48 11361 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+49 11370 [iot_thread] [INFO ][DEMO][lu] Waiting for 2 publishes to be received.
+50 11407 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 4 successfully sent.
+51 11423 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 5 successfully sent.
+52 11442 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/1
+Publish topic name: iotdemo/topic/1
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 4!
+53 11462 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+54 11471 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 4 will be sent.
+55 11494 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/2
+Publish topic name: iotdemo/topic/2
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 5!
+56 11514 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+57 11523 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 5 will be sent.
+58 11532 [iot_thread] [INFO ][DEMO][lu] 2 publishes received.
+59 11538 [iot_thread] [INFO ][DEMO][lu] Publishing messages 6 to 7.
+60 11545 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+61 11555 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+62 11564 [iot_thread] [INFO ][DEMO][lu] Waiting for 2 publishes to be received.
+63 11602 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 6 successfully sent.
+64 11618 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 7 successfully sent.
+65 11637 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/3
+Publish topic name: iotdemo/topic/3
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 6!
+66 11657 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+67 11666 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 6 will be sent.
+68 11689 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/4
+Publish topic name: iotdemo/topic/4
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 7!
+69 11709 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+70 11718 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 7 will be sent.
+71 11727 [iot_thread] [INFO ][DEMO][lu] 2 publishes received.
+72 11733 [iot_thread] [INFO ][DEMO][lu] Publishing messages 8 to 9.
+73 11740 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+74 11750 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+75 11759 [iot_thread] [INFO ][DEMO][lu] Waiting for 2 publishes to be received.
+76 11797 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 8 successfully sent.
+77 11813 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 9 successfully sent.
+78 11832 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/1
+Publish topic name: iotdemo/topic/1
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 8!
+79 11852 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+80 11861 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 8 will be sent.
+81 11884 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/2
+Publish topic name: iotdemo/topic/2
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 9!
+82 11904 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+83 11913 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 9 will be sent.
+84 11922 [iot_thread] [INFO ][DEMO][lu] 2 publishes received.
+85 11928 [iot_thread] [INFO ][DEMO][lu] Publishing messages 10 to 11.
+86 11936 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+87 11945 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+88 11955 [iot_thread] [INFO ][DEMO][lu] Waiting for 2 publishes to be received.
+89 11991 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 10 successfully sent.
+90 12007 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 11 successfully sent.
+.91 12026 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/3
+Publish topic name: iotdemo/topic/3
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 10!
+92 12046 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+93 12055 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 10 will be sent.
+94 12078 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/4
+Publish topic name: iotdemo/topic/4
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 11!
+95 12098 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+96 12107 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 11 will be sent.
+97 12116 [iot_thread] [INFO ][DEMO][lu] 2 publishes received.
+98 12122 [iot_thread] [INFO ][DEMO][lu] Publishing messages 12 to 13.
+99 12130 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+100 12140 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+101 12149 [iot_thread] [INFO ][DEMO][lu] Waiting for 2 publishes to be received.
+102 12186 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 12 successfully sent.
+103 12202 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 13 successfully sent.
+104 12221 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/1
+Publish topic name: iotdemo/topic/1
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 12!
+105 12241 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+106 12251 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 12 will be sent.
+107 12274 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/2
+Publish topic name: iotdemo/topic/2
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 13!
+108 12294 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+109 12304 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 13 will be sent.
+110 12312 [iot_thread] [INFO ][DEMO][lu] 2 publishes received.
+111 12318 [iot_thread] [INFO ][DEMO][lu] Publishing messages 14 to 15.
+112 12325 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+113 12336 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+114 12345 [iot_thread] [INFO ][DEMO][lu] Waiting for 2 publishes to be received.
+115 12383 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 14 successfully sent.
+116 12399 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 15 successfully sent.
+117 12418 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/3
+Publish topic name: iotdemo/topic/3
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 14!
+118 12438 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+119 12448 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 14 will be sent.
+120 12471 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/4
+Publish topic name: iotdemo/topic/4
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 15!
+121 12491 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+122 12501 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 15 will be sent.
+123 12509 [iot_thread] [INFO ][DEMO][lu] 2 publishes received.
+124 12515 [iot_thread] [INFO ][DEMO][lu] Publishing messages 16 to 17.
+125 12522 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+126 12533 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+127 12542 [iot_thread] [INFO ][DEMO][lu] Waiting for 2 publishes to be received.
+128 12580 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 16 successfully sent.
+129 12596 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 17 successfully sent.
+130 12615 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/1
+Publish topic name: iotdemo/topic/1
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 16!
+131 12635 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+132 12645 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 16 will be sent.
+133 12668 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/2
+Publish topic name: iotdemo/topic/2
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 17!
+134 12688 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+135 12698 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 17 will be sent.
+136 12706 [iot_thread] [INFO ][DEMO][lu] 2 publishes received.
+137 12712 [iot_thread] [INFO ][DEMO][lu] Publishing messages 18 to 19.
+138 12719 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+139 12730 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+140 12739 [iot_thread] [INFO ][DEMO][lu] Waiting for 2 publishes to be received.
+141 12777 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 18 successfully sent.
+142 12793 [iot_thread] [INFO ][DEMO][lu] MQTT PUBLISH 19 successfully sent.
+143 12812 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/3
+Publish topic name: iotdemo/topic/3
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 18!
+144 12832 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+145 12842 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 18 will be sent.
+146 12866 [iot_thread] [INFO ][DEMO][lu] Incoming PUBLISH received:
+Subscription topic filter: iotdemo/topic/4
+Publish topic name: iotdemo/topic/4
+Publish retain flag: 0
+Publish QoS: 1
+Publish payload: Hello world 19!
+147 12886 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) MQTT PUBLISH operation queued.
+148 12896 [iot_thread] [INFO ][DEMO][lu] Acknowledgment message for PUBLISH 19 will be sent.
+149 12904 [iot_thread] [INFO ][DEMO][lu] 2 publishes received.
+150 12911 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) UNSUBSCRIBE operation scheduled.
+151 12921 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0, UNSUBSCRIBE operation 0x20044868) Waiting for operation completion.
+152 13000 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0, UNSUBSCRIBE operation 0x20044868) Wait complete with result SUCCESS.
+153 13012 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) Disconnecting connection.
+154 13022 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0, DISCONNECT operation 0x20044868) Waiting for operation completion.
+155 13037 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0, DISCONNECT operation 0x20044868) Wait complete with result SUCCESS.
+156 13049 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) Connection disconnected.
+157 13058 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) Network connection closed.
+158 13080 [iot_thread] [INFO ][MQTT][lu] (MQTT connection 0x200446c0) Network connection destroyed.
+159 13089 [iot_thread] [INFO ][MQTT][lu] MQTT library cleanup done.
+160 13095 [iot_thread] [INFO ][DEMO][lu] memory_metrics::freertos_heap::before::bytes::193928
+161 13104 [iot_thread] [INFO ][DEMO][lu] memory_metrics::freertos_heap::after::bytes::147400
+162 13112 [iot_thread] [INFO ][DEMO][lu] memory_metrics::demo_task_stack::before::bytes::0
+163 13120 [iot_thread] [INFO ][DEMO][lu] memory_metrics::demo_task_stack::after::bytes::0
+164 13128 [iot_thread] [INFO ][DEMO][lu] Demo completed successfully.
+165 13141 [iot_thread] [INFO ][INIT][lu] SDK cleanup done.
+166 13146 [iot_thread] [INFO ][DEMO][lu] -------DEMO FINISHED-------
+
+........
